@@ -1,4 +1,4 @@
-function searchProfile() {
+async function searchProfile() {
     const username = document.getElementById("searchBar").value;
     const errorArea = document.getElementById("errorArea");
     const url = `https://api.github.com/users/${username}`;
@@ -14,9 +14,9 @@ function searchProfile() {
         errorArea.innerHTML = "";
     }
 
-    let profileJson = fetch(url).then( (response) => {
-        return response.json();
-    });
-
+    let profileJson = await fetch(url).then((response) => response.json()).then((result) => result);
+    
+    // await (await fetch(url)).json();
+    
     console.log(profileJson.id);
 }
