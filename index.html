@@ -7,10 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
 </head>
-<body>
-    <div class="display-3 text-center p-2 bg-light">GitHub Profile Search</div>
+<body style="overflow-x: hidden;">
+    <div class="display-3 text-center p-3 bg-light">GitHub Profile Search</div>
 
-    <div class="container">
+    <div class="container pb-5">
         <section class="p-5 d-flex" style="column-gap: 10px;">
             <input type="text" class="form-control rounded-pill" placeholder="Search by username">
             <button class="btn btn-outline-primary rounded-pill">Search</button>
@@ -18,7 +18,7 @@
     
         <section class="p-2 px-4">
             <h3>History</h3>
-            <div class="my-3 px-3 m-auto" style="height: 120px; overflow: auto; display: flex; column-gap: 50px;">
+            <div class="my-3 px-3 m-auto" style="height: 125px; overflow: auto; display: flex; column-gap: 50px;">
                 <div class="text-center" style="width: 90px; word-wrap: break-word;">
                     <div class="bg-secondary-subtle rounded-circle" style="width: 75px; height: 75px; justify-self: center;"></div>
                     Profile name
@@ -44,16 +44,16 @@
     
         <section class="p-2 px-4">
             <h3>Profile</h3>
-            <div class="card m-auto" style="max-width: 50rem;">
+            <div class="card m-auto rounded-4" style="max-width: 50rem; overflow: hidden;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="TH_25094225_25187225_001.jpg" class="img-fluid rounded-start" alt="...">
+                    <img src="TH_25094225_25187225_001.jpg" class="img-fluid" alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
                       <div class="card-title display-6 mb-0">Profile name</div>
                       <h5 class="text-body-tertiary mb-2">username</h5>
-                      <a href="">profileurl.com</a>
+                      <a class="text-primary" href="" target="_blank">profileurl.com</a>
                       <p class="mt-4">Company name</p>
                       <p>Country name</p>
                     </div>
@@ -62,6 +62,25 @@
               </div>
         </section>
     </div>
+
+    <footer style="overflow: hidden;">
+        <div class="row p-5 mt-5 bg-light">
+            <div class="col-12 col-lg-5 mb-4">
+                <h1 class="text-primary">Thank you <span class="text-black">for using!</span></h1>
+            </div>
+            <div class="col-12 col-lg-7">
+                <p>This application was developed in order to study and practice the used technologies (Bootstrap and
+                    JavaScript in this case), not aiming any kind of professional, economic nor marketing usage.</p>
+                <p class="mb-2">This project and it's source code can be accessed in <a
+                        href="https://github.com/peduu87/github-profile-search" target="_blank" class="text-dark">github.com</a>.</p>
+            </div>
+        </div>
+        <div class="bg-secondary text-white text-center p-4">
+            Project developed by Pedro H. Silva
+            <br>
+            2025
+        </div>
+    </footer>
 
 
 
