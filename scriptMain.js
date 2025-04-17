@@ -56,6 +56,10 @@ async function searchProfile() {
     location.innerHTML = getProfileLocation(profileJson);
     profilePage.href = profileJson.html_url;
     avatar.src = profileJson.avatar_url;
+
+    addToHistory(profileJson);
+
+    console.log(searchHistory);
 }
 
 function getProfileSinceField(pJson) {
@@ -77,4 +81,15 @@ function copyProfileLink() {
     const profilePageLink = document.getElementById("profilePage").href;
 
     navigator.clipboard.writeText(profilePageLink);
+}
+
+function addToHistory(pJson) {
+    searchHistory.push({
+            username: pJson.login,
+            avatar: pJson.avatar_url,
+    });
+
+    if (searchHistory.length > 5) {
+        searchHistory.splice(0, 1);
+    }
 }
