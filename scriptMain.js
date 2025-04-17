@@ -84,6 +84,12 @@ function copyProfileLink() {
 }
 
 function addToHistory(pJson) {
+    for (let i = 0; i < searchHistory.length; i++) {
+        if (searchHistory[i].username == pJson.login) {
+            searchHistory.splice(i, 1);
+        }
+    }
+
     searchHistory.push({
             username: pJson.login,
             avatar: pJson.avatar_url,
