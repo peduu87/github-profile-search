@@ -48,22 +48,22 @@
     
         <section class="p-2 px-4">
             <h3>Profile</h3>
-            <div class="card m-auto rounded-4" style="max-width: 50rem; overflow: hidden;">
+            <div class="card m-auto rounded-4" style="max-width: 55rem; overflow: hidden;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="TH_25094225_25187225_001.jpg" class="img-fluid" alt="...">
+                        <img src="TH_25094225_25187225_001.jpg" id="profileAvatar" class="img-fluid" alt="Profile avatar">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                            <div class="card-title display-6 mb-0">Profile name</div>
-                            <h5 class="text-body-tertiary mb-2">username</h5>
+                            <div class="card-title display-6 mb-0" id="profileName">Profile name</div>
+                            <h5 class="text-body-tertiary mb-2" id="profileUsername">username</h5>
                             <div class="d-flex justify-content-between my-2">
-                                <h5 class="">Followers: 0</h5>
-                                <h5 class="text-body-tertiary">Since 00/00/0000</h5>
+                                <h5 class="">Followers: <span id="profileFollowers">0</span></h5>
+                                <h5 class="text-body-tertiary">Since <span id="profileSinceField">00/00/0000</span></h5>
                             </div>
-                            <p class="my-4">Location</p>
+                            <p class="my-4" id="profileLocation">Location</p>
                             <div style="font-size: 1.1rem;">
-                                See on <a class="text-primary" style="text-decoration: none;" href=""
+                                See on <a class="text-primary" style="text-decoration: none;" id="profilePage" href=""
                                     target="_blank">github.com</a>
                                 <button class="btn p-0" style="margin-top: -5px;"><svg xmlns="http://www.w3.org/2000/svg"
                                         height="20px" viewBox="0 -960 960 960" width="20px" fill="#1f1f1f">
