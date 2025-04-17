@@ -108,14 +108,21 @@ function updateHistory() {
 
     for (let el of searchHistory) {
         historyDiv.insertAdjacentHTML("afterbegin", (
-            `<div class="text-center" style="width: 90px; height: 125px; word-wrap: break-word;">
+            `<div class="text-center" style="width: 90px; height: 125px; word-wrap: break-word; cursor: pointer;" onclick="searchHistoryProfileAgain(this)">
                     <div class="bg-secondary-subtle rounded-circle" style="width: 75px; height: 75px; justify-self: center; overflow: hidden;">
                         <img src="${el.avatar}" class="img-fluid" alt="Profile avatar">
                     </div>
-                    <div>
-                        ${el.username}
-                    </div>
+                    <div name="historyUsername">${el.username}</div>
                 </div>`
         ))
     }
+}
+
+function searchHistoryProfileAgain(profile) {
+    const historyUsername = profile.querySelector('div[name="historyUsername"]').innerHTML;
+    const searchBar = document.getElementById("searchBar");
+    
+    searchBar.value = historyUsername;
+
+    searchProfile();
 }
