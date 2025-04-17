@@ -48,6 +48,7 @@ async function searchProfile() {
     const location = document.getElementById("profileLocation");
     const profilePage = document.getElementById("profilePage");
     const avatar = document.getElementById("profileAvatar");
+    const profileCard = document.getElementById("profileCard");
 
     profileName.innerHTML = profileJson.name;
     username.innerHTML = profileJson.login;
@@ -58,8 +59,6 @@ async function searchProfile() {
     avatar.src = profileJson.avatar_url;
 
     addToHistory(profileJson);
-
-    console.log(searchHistory);
 }
 
 function getProfileSinceField(pJson) {
@@ -97,5 +96,26 @@ function addToHistory(pJson) {
 
     if (searchHistory.length > 5) {
         searchHistory.splice(0, 1);
+    }
+
+    updateHistory();
+}
+
+function updateHistory() {
+    const historyDiv = document.getElementById("historyDiv");
+
+    historyDiv.innerHTML = "";
+
+    for (let el of searchHistory) {
+        historyDiv.insertAdjacentHTML("afterbegin", (
+            `<div class="text-center" style="width: 90px; height: 125px; word-wrap: break-word;">
+                    <div class="bg-secondary-subtle rounded-circle" style="width: 75px; height: 75px; justify-self: center; overflow: hidden;">
+                        <img src="${el.avatar}" class="img-fluid" alt="Profile avatar">
+                    </div>
+                    <div>
+                        ${el.username}
+                    </div>
+                </div>`
+        ))
     }
 }
