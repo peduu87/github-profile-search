@@ -70,3 +70,9 @@ function getProfileLocation(pJson) {
         return "";
     }
 }
+
+function copyProfileLink() {
+    const profilePageLink = document.getElementById("profilePage").href;
+
+    navigator.clipboard.writeText(profilePageLink);
+}
