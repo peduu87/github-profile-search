@@ -1,3 +1,5 @@
+let searchHistory = [];
+
 async function searchProfile() {
     const search = document.getElementById("searchBar").value;
     const errorArea = document.getElementById("errorArea");
